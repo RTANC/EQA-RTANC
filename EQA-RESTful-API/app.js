@@ -5,7 +5,7 @@ const cors = require('cors')
 const api = require('./api')
 const app = express()
 
-mongoose.connect('mongodb://localhost/oxigen', err => {
+mongoose.connect('mongodb://localhost/eqa', err => {
     if (err) {
         console.log(err)
     } else {
