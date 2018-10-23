@@ -1,7 +1,14 @@
 <template>
   <v-app>
-    <v-toolbar app>
-      <v-btn color="error" @click="onSignOut">Sign Out</v-btn>
+    <v-toolbar app color="grey darken-4" dark>
+      <v-toolbar-side-icon>
+        <v-img src="https://upload.wikimedia.org/wikipedia/th/4/46/Logo_rtanc.png"></v-img>
+      </v-toolbar-side-icon>
+      <v-toolbar-title>EQA-RTANC</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn color="error" flat>Sign Out</v-btn>
+      </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <router-view/>
