@@ -1,0 +1,33 @@
+<template>
+<v-container grid-list-md fluid fill-height>
+    <v-layout row wrap justify-center>
+       <v-flex xs12 sm4 md4>
+            <v-card>
+            <v-card-title>
+                Sign In
+            </v-card-title>
+            <v-card-text>
+                <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"></v-img>
+            </v-card-text>
+            <v-card-actions>
+                <signin-button @sign="onSigned" client_id="796380492881-pd70tauio7jfopaqguhmvr97dfn318sr.apps.googleusercontent.com"></signin-button>
+            </v-card-actions>
+        </v-card>
+       </v-flex>
+    </v-layout>
+</v-container>
+</template>
+
+<script>
+import SigninButton from './SigninButton'
+export default {
+    name: 'SignIn',
+    components: {SigninButton},
+    methods: {
+        onSigned (user) {
+            const profile = user.getBasicProfile()
+            console.log('Welcome: ' + profile.getName())
+        }
+    }
+}
+</script>
