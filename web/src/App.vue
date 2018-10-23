@@ -11,10 +11,12 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
+      <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" :height="h">
       <router-view/>
+      </v-parallax>
     </v-content>
     <v-footer app>
-      <span>&copy; 2017</span>
+      <span>&copy; &nbsp;วิทยาลัยพยาบาลกองทัพบก</span>
     </v-footer>
   </v-app>
 </template>
@@ -22,6 +24,11 @@
 <script>
 export default {
   name: 'App',
+  data () {
+    return {
+      h: window.innerHeight
+    }
+  },
   methods: {
     onSignOut () {
       var auth2 = gapi.auth2.getAuthInstance()

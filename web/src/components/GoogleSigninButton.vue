@@ -1,10 +1,10 @@
 <template>
-    <div ref="signinBtn" class="g-signin2"></div>
+    <div ref="signinBtn" class="g-signin2" data-theme="dark" data-longtitle="true"></div>
 </template>
 
 <script>
 export default {
-    name: 'SigninButton',
+    name: 'GoogleSigninButton',
     props: {
         client_id: {
             type: String,

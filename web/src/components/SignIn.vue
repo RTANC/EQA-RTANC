@@ -1,14 +1,14 @@
 <template>
 <v-container grid-list-md fluid fill-height>
     <v-layout row wrap justify-center>
-       <v-flex xs12 sm4 md4>
+       <v-flex xs12 sm8 md4>
             <v-card>
-            <v-card-title class="headline">ลงชื่อเข้าใช้</v-card-title>
-            <v-card-actions>
-                <v-spacer></v-spacer>
-                <signin-button @sign="onSigned" client_id="796380492881-pd70tauio7jfopaqguhmvr97dfn318sr.apps.googleusercontent.com"></signin-button>
-                <v-spacer></v-spacer>
-            </v-card-actions>
+                <v-toolbar color="primary" dark>
+                    <v-toolbar-title>ลงชื่อเข้าใช้</v-toolbar-title>
+                </v-toolbar>
+                <v-card-text>
+                    <google-signin-button @sign="onSigned" client_id="796380492881-pd70tauio7jfopaqguhmvr97dfn318sr.apps.googleusercontent.com"></google-signin-button>
+                </v-card-text>
         </v-card>
        </v-flex>
     </v-layout>
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import SigninButton from './SigninButton'
+import GoogleSigninButton from './GoogleSigninButton'
 export default {
     name: 'SignIn',
-    components: {SigninButton},
+    components: {GoogleSigninButton},
     methods: {
         onSigned (user) {
             const profile = user.getBasicProfile()
