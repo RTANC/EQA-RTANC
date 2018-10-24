@@ -1,5 +1,6 @@
 {
   "env": {
-    "JWT_KEY": "PRIVATE_KEY"
+    "JWT_KEY": "PRIVATE_KEY",
+    "CLIENT_ID": "796380492881-pd70tauio7jfopaqguhmvr97dfn318sr.apps.googleusercontent.com"
   }
 }

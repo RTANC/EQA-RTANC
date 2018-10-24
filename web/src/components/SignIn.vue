@@ -2,8 +2,8 @@
 <v-container grid-list-md fluid fill-height>
     <v-layout row wrap justify-center>
        <v-flex xs12 sm8 md4>
-            <v-card>
-                <v-toolbar color="primary" dark>
+            <v-card class="elevation-3">
+                <v-toolbar color="deep-purple" dark>
                     <v-toolbar-title>ลงชื่อเข้าใช้</v-toolbar-title>
                 </v-toolbar>
                 <v-card-text>
@@ -22,8 +22,10 @@ export default {
     components: {GoogleSigninButton},
     methods: {
         onSigned (user) {
-            const profile = user.getBasicProfile()
-            console.log('Welcome: ' + profile.getName())
+            const id_token = user.getAuthResponse().id_token
+            console.log(id_token)
+            this.$store.dispatch('setUser', id_token)
+            this.$router.push('Home')
         }
     }
 }

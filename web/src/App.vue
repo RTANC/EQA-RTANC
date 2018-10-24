@@ -7,7 +7,7 @@
       <v-toolbar-title>EQA-RTANC</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn color="error" flat>Sign Out</v-btn>
+        <v-btn color="error" flat v-if="$store.getters.user" @click="onSignOut">Sign Out</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
@@ -32,9 +32,11 @@ export default {
   methods: {
     onSignOut () {
       var auth2 = gapi.auth2.getAuthInstance()
-      auth2.signOut().then(function () {
-      console.log('User signed out.')
-    })
+      auth2.signOut().then(x => {
+        this.$router.push('/')
+      }).catch(error => {
+        console.log(error)
+      })
     }
   }
 }
