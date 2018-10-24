@@ -6,6 +6,7 @@
                     <v-img src="https://www.kroobannok.com/news_pic/p52992150031.jpg" height="200"></v-img>
                     <v-card-title primary-title>สำนักงานคณะกรรมการการอุดมศึกษา</v-card-title>
                     <v-card-actions>
+                        <v-spacer></v-spacer>
                         <v-btn flat icon>
                             <v-icon>assignment</v-icon>
                         </v-btn>
@@ -14,6 +15,9 @@
                         </v-btn>
                         <v-btn flat icon>
                             <v-icon>assignment_turned_in</v-icon>
+                        </v-btn>
+                        <v-btn flat icon>
+                            <v-icon>create</v-icon>
                         </v-btn>
                     </v-card-actions>
                 </v-card>
