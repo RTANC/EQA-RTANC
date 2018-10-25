@@ -3,19 +3,13 @@ const userSchema = mongoose.Schema({
     username: String,
     password: String,
     fullname: String,
-    role: {
-        admin: {
-            type: Boolean,
-            default: true
-        },
-        qa: {
-            type: Boolean,
-            default: true
-        },
-        writer: {
-        },
-        checker: {
-        }
+    admin: {
+        type: Boolean,
+        default: false
+    },
+    qa: {
+        type: Boolean,
+        default: false
     },
     chpasswd: {
         type: Boolean,
