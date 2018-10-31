@@ -16,6 +16,6 @@ router.patch('/:uid/chpasswd', chpasswd)
 
 router.patch('/:uid/chname', chname)
 
-router.delete('/:uid/remove', remove)
+router.delete('/:uid', remove)
 
 module.exports = router
