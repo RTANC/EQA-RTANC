@@ -7,7 +7,7 @@
                     <v-toolbar-title>ลงชื่อเข้าใช้</v-toolbar-title>
                 </v-toolbar>
                 <v-card-text>
-                    <google-signin-button @sign="onSigned" client_id="796380492881-pd70tauio7jfopaqguhmvr97dfn318sr.apps.googleusercontent.com"></google-signin-button>
+                    <google-signin-button @sign="onSigned" client_id="187030924029-1gmjvpcgk42j1jft6nnidu2o7m7uo6qv.apps.googleusercontent.com"></google-signin-button>
                 </v-card-text>
         </v-card>
        </v-flex>
